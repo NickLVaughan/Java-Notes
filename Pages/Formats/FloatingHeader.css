@@ -1,0 +1,17 @@
+body {
+    background-image: url("Resources/background1.jpeg");
+    background-color: #cccccc;
+}
+
+.home {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.home li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+}
