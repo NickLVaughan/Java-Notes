@@ -1,13 +1,12 @@
-let x = -1;
-const directory = 'Formats/Resources/';
-const images = ['proj1-1.jpg','proj2-2.jpg','proj3-1.jpg','proj2-1.jpg','proj1-2.jpg','proj3-2.jpg'];
-
 function start() {
-    setInterval(displayNext, 2000);
-}
+    let x = document.createTextNode("PLACEHOLDER IN JS");
+    document.getElementById("weeklyStats").appendChild(x);
 
-function displayNext() {
-    x = (x === images.length - 1) ? 0 : x + 1;
-    document.getElementById('rotatingImage').src = (directory + images[x]);
-    //alert(document.getElementById('rotatingImage').src = (directory + images[x]));
+    const url = 'http://localhost:8080/login';
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => console.log(data[0]))
+        .catch(err => alert(err));
+
 }
